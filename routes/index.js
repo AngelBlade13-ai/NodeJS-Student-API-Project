@@ -1,10 +1,11 @@
-const myController = require("../controllers");
 const routes = require("express").Router();
+const myController = require("../controllers");
 
 routes.get("/", myController.awesomeFunction);
 
 routes.get("/ttech", myController.tooeleTech);
 
-routes.get("/students", myController.getAllStudents);
+// student routes
+routes.use("/students", require("./students"));
 
 module.exports = routes;
