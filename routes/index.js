@@ -8,4 +8,7 @@ routes.get("/ttech", myController.tooeleTech);
 // student routes
 routes.use("/students", require("./students"));
 
+// auth routes
+routes.use("/auth", require("./auth"));
+
 module.exports = routes;
